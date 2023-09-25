@@ -1,0 +1,34 @@
+package programs;
+
+import java.util.Scanner;
+
+public class Access {
+
+	public static void main(String[] args) {
+		Scanner scanner =  new Scanner(System.in);
+		String password;
+		int number = 0;
+
+		for (int i = 1; i <= 3; i++) {
+			System.out.print("Enter password: ");
+			password = scanner.next();
+
+			if (password.equals("quit")) {
+				System.out.println("Access Denied");
+				i = 3;
+			} else {
+				System.out.print("Enter number: ");
+				number = scanner.nextInt();		
+				if (password.equals("terps") && number == 1847) {
+					System.out.println("Access Granted");
+					i = 3;
+				} else {
+					System.out.println("Wrong credentials");
+					if (i == 3) {
+						System.out.println("Access Denied");
+					}
+				}
+			}
+		}
+	}
+}
