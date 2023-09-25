@@ -1,0 +1,46 @@
+package programs;
+
+import java.util.Scanner;
+
+public class ColorGenerator {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String red, greenBlue;
+		boolean redValue, greenBlueValue;
+		
+		System.out.print("Do you want red? (Yes/Yeah/No): ");
+		red = scanner.next();
+		System.out.print("Do you want green and blue? (Yes/Yeah/No): ");
+		greenBlue = scanner.next();
+		
+		if (red.equals("Yes")||red.equals("Yeah")) {
+			redValue = true;
+		} else { 
+			redValue = false;
+		}
+		
+		if (greenBlue.equals("Yes")||greenBlue.equals("Yeah")) {
+			greenBlueValue = true;
+		} else {
+			greenBlueValue = false;
+		}
+		
+		if (redValue == true) {
+			System.out.print("Final Color: #FF");
+		} else {
+			System.out.print("Final Color: #00");
+		}
+		
+		if (greenBlueValue == true) {
+			System.out.print("FFFF");
+		} else {
+			System.out.print("0000");
+		}
+		
+		
+		
+
+		scanner.close();
+	}
+}
