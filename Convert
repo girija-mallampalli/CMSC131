@@ -1,0 +1,28 @@
+package programs;
+
+import java.util.Scanner;
+
+public class Convert {
+
+	public static void main(String[] args) {
+		int x, remainder;
+		String octValue = "";
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.print("Enter decimal number: ");
+		x = scanner.nextInt();
+		if (x == 0) {
+			octValue = "0";
+		}
+
+		while (x != 0){
+			remainder = x%8;
+			x = x/8;
+			octValue = remainder + octValue;
+		}
+
+		System.out.println("Octal value: " + octValue);
+
+		scanner.close();
+	}
+}
