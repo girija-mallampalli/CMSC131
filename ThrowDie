@@ -1,0 +1,44 @@
+package programs;
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class ThrowDie {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int i, dieThrow, seed;
+
+		System.out.print("How many times to throw a die?: ");
+		dieThrow = scanner.nextInt();
+
+		System.out.print("Enter seed: ");
+		seed = scanner.nextInt();
+
+		Random random = new Random(seed);
+		i = 1;
+		while (i <= dieThrow) {
+			System.out.println("Throw #" + i);
+			int face = random.nextInt(6) + 1;
+			if (face == 1) {
+				System.out.println("...\n.0.\n...");
+			} else if (face == 2) {
+				System.out.println("0..\n...\n..0");
+			} else if (face == 3) {
+				System.out.println("0..\n.0.\n..0");
+			} else if (face == 4) {
+				System.out.println("0.0\n...\n0.0");
+			} else if (face == 5) {
+				System.out.println("0.0\n.0.\n0.0");
+			} else if (face == 6) {
+				System.out.println("0.0\n0.0\n0.0");
+			}
+
+			i++;
+		}
+
+		scanner.close();
+
+	}
+
+}
