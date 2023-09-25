@@ -1,0 +1,25 @@
+package programs;
+import java.util.Scanner;
+
+public class Divisible {
+
+	public static void main(String[] args) {
+		int x, y;
+		
+		Scanner scanner = new Scanner (System.in);
+		
+		System.out.print("Enter x: ");
+		x = scanner.nextInt();
+		System.out.print("Enter y: ");
+		y = scanner.nextInt();
+		
+		System.out.println("Remainder: " + x%y);
+		if (x%y == 0) {
+			System.out.println(x + " is divisible by " + y);
+		} else {
+			System.out.println(x + " is NOT divisible by " + y);
+		}
+		
+		scanner.close();
+	}
+}
